@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 import { Navigation } from 'swiper'// 導入 Navigation 模組
 
@@ -40,14 +39,14 @@ const swiperOptions = {
 
     <Swiper class="bg" :modules="[Navigation]" :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :loop="true">
       <SwiperSlide>
-        <img src="./s3/bg1.jpg" alt="bg" />
+        <img src="./s3/bg1.webp" alt="bg" />
         <img class="title" src="./s3/title.svg" alt="title">
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./s3/bg2.jpg" alt="bg" />
+        <img src="./s3/bg2.webp" alt="bg" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src="./s3/bg3.jpg" alt="bg" />
+        <img src="./s3/bg3.webp" alt="bg" />
       </SwiperSlide>
     </Swiper>
   </article>

@@ -7,11 +7,11 @@
       </h3>
     </div>
     <div class="content">
-      <img src="./s4/bg.png" alt="bg">
+      <img class="bg" src="./s4/bg.webp" alt="bg">
       <div class="text">
         <img class="title" src="./s4/title.svg" alt="title" data-aos="zoom-in" data-aos-delay="0">
         <img class="subtitle" src="./s4/subtitle.svg" alt="subtitle" data-aos="zoom-in" data-aos-delay="0">
-        <img class="pic" src="./s4/pic.png" alt="pic" data-aos="zoom-in" data-aos-delay="0">
+        <img class="pic" src="./s4/pic.webp" alt="pic" data-aos="zoom-in" data-aos-delay="0">
       </div>
       <p class="b_text font-['Noto_sans_tc'] text-[#fff]">
         高雄台積電實景拍攝 綠意合成示意圖
@@ -46,6 +46,10 @@
   .content {
     position: relative;
 
+    .bg{
+      width: 100%;
+    }
+
     .text {
       position: absolute;
       left: 0;
@@ -60,10 +64,20 @@
       img {
         display: block;
 
+        &.title{
+          @media screen and (min-width: 768px) {
+            width: size(660);
+          }
+        }
         &.subtitle {
           @media screen and (min-width: 768px) {
             margin-top: size(25);
             margin-bottom: size(25);
+          }
+        }
+        &.pic{
+          @media screen and (min-width: 768px) {
+            width: size(650);
           }
         }
       }

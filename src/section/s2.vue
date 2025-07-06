@@ -1,12 +1,12 @@
 <template>
   <article class="s2 relative" id="s2">
-    <img src="./s2/bg.jpg" alt="bg">
+    <img class="bg" src="./s2/bg.webp" alt="bg">
     <div class="text">
       <img class="title" src="./s2/title.svg" alt="title" data-aos="zoom-in" data-aos-delay="0">
       <img class="sub-title" src="./s2/subTitle.svg" alt="subTitle" data-aos="zoom-in" data-aos-delay="0">
     </div>
     <div class="building">
-      <img src="./s2/building.png" alt="building" data-aos="fade-up" data-aos-delay="3">
+      <img src="./s2/building.webp" alt="building" data-aos="fade-up" data-aos-delay="3">
     </div>
     <div class="b_text font-['Noto_sans_tc'] text-[#fff]">半屏山 情境示意圖</div>
   </article>
@@ -17,7 +17,9 @@
 
 .s2 {
   position: relative;
-
+  .bg{
+    width: 100%;
+  }
   .text {
     position: absolute;
     z-index: 1;
@@ -47,6 +49,12 @@
     @media screen and (min-width: 768px) {
       left: size(290);
       bottom: 0;
+    }
+
+    img{
+      @media screen and (min-width: 768px) {
+        width: size(340);
+      }
     }
   }
 

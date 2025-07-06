@@ -99,17 +99,27 @@
     .title {
       position: relative;
 
+      .title-bg{
+        @media screen and (min-width: 768px) {
+          width: size(995);
+        }
+      }
+      
       .title-main {
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media screen and (min-width: 768px) {
+          width: size(820);
+        }
       }
     }
 
     .sub-title {
       @media screen and (min-width: 768px) {
         margin: size(45) auto 0 auto;
+        width: size(420);
       }
     }
   }
