@@ -64,6 +64,7 @@ import 'swiper/css'
       position: absolute;
       right: 0;
       bottom: 0;
+      width: sizem(315);
 
       @media screen and (min-width: 768px) {
         width: size(1600);
@@ -72,16 +73,21 @@ import 'swiper/css'
 
     .title {
       position: absolute;
-
-      .swiper-slide {
-        width: auto !important;
-      }
+      left: sizem(25);
+      top: sizem(15);
+      width: sizem(185);
 
       @media screen and (min-width: 768px) {
         left: size(195);
         top: size(80);
         width: size(820);
       }
+
+      .swiper-slide {
+        width: auto !important;
+      }
+
+
     }
   }
 
@@ -95,13 +101,19 @@ import 'swiper/css'
     p {
       color: #000;
       font-weight: 400;
-      line-height: 1.5;
-      position: absolute;
+      line-height: sizem(20);
+      font-size: sizem(10);
+      background: #B9CCDA;
+      text-align: right;
+      padding-right: sizem(5);
 
       @media screen and (min-width: 768px) {
+        position: absolute;
         font-size: size(15);
         right: size(10);
         bottom: size(10);
+        background: transparent;
+        padding-right: 0;
       }
     }
   }
@@ -110,6 +122,8 @@ import 'swiper/css'
     .text {
       .b_title {
         display: block;
+        margin-top: sizem(30);
+        width: sizem(245);
 
         @media screen and (min-width: 768px) {
           margin-top: size(100);
@@ -119,6 +133,9 @@ import 'swiper/css'
 
       .mrt {
         display: block;
+        margin-top: sizem(10);
+        margin-bottom: sizem(50);
+        width: sizem(360);
 
         @media screen and (min-width: 768px) {
           margin-top: size(20);
@@ -143,10 +160,13 @@ import 'swiper/css'
         margin: auto;
         bottom: 0;
         width: 100%;
-        .train-img{
+
+        .train-img {
           width: auto;
+          height: sizem(45);
+
           @media screen and (min-width: 768px) {
-          height: size(100);
+            height: size(100);
           }
         }
       }

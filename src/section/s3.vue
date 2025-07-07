@@ -37,7 +37,8 @@ const swiperOptions = {
       </svg>
     </div>
 
-    <Swiper class="bg" :modules="[Navigation]" :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }" :loop="true">
+    <Swiper class="bg" :modules="[Navigation]" :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
+      :loop="true">
       <SwiperSlide>
         <img src="./s3/bg1.webp" alt="bg" />
         <img class="title" src="./s3/title.svg" alt="title">
@@ -73,10 +74,12 @@ const swiperOptions = {
         right: 0;
         margin: auto;
         z-index: 12;
+        top: sizem(30);
+        width: sizem(250);
 
         @media screen and (min-width: 768px) {
           top: size(120);
-          width: size(820);;
+          width: size(820);
         }
       }
     }
@@ -86,14 +89,19 @@ const swiperOptions = {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 37px;
-    height: 66px;
     cursor: pointer;
     z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: opacity 0.3s;
+    height: sizem(6.75);
+    width: sizem(13.5);
+
+    @media screen and (min-width: 768px) {
+      width: size(37);
+      height: size(66);
+    }
 
     svg {
       width: 100%;
@@ -101,11 +109,15 @@ const swiperOptions = {
     }
 
     &.custom-prev {
-      left: 10px;
+      @media screen and (min-width: 768px) {
+        left: size(10);
+      }
     }
 
     &.custom-next {
-      right: 10px;
+      @media screen and (min-width: 768px) {
+        right: size(10);
+      }
     }
 
     &:hover {

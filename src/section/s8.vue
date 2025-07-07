@@ -5,7 +5,8 @@
         <img src="./s8/title.svg" alt="title">
       </div>
       <div class="banner">
-        <img src="./s8/pic.png" alt="banner">
+        <img class="block md:hidden" src="./s8/pic_m.webp" alt="banner">
+        <img class="hidden md:block" src="./s8/pic.webp" alt="banner">
       </div>
     </div>
     <div class="bottom">
@@ -39,14 +40,25 @@
       text-align: center;
 
       img {
+        width: sizem(225);
+        margin-top: sizem(30);
+        margin-bottom: sizem(15);
+
         @media screen and (min-width: 768px) {
           margin-top: size(85);
           margin-bottom: size(75);
+          width: size(740);
         }
       }
     }
 
     .banner {
+      padding-bottom: sizem(15);
+
+      @media screen and (min-width: 768px) {
+        padding-bottom: 0;
+      }
+
       img {
         width: 100%;
       }
@@ -58,6 +70,10 @@
       text-align: center;
       font-weight: 400;
       line-height: 1.5;
+      margin-top: sizem(15);
+      margin-bottom: sizem(10);
+      font-size: sizem(14);
+      letter-spacing: sizem(1.96);
 
       @media screen and (min-width: 768px) {
         margin-top: size(25);
@@ -79,8 +95,10 @@
       }
 
       img {
+        width: calc(100% / 5);
+
         @media screen and (min-width: 768px) {
-        width: calc(100% / 5 - (size(30) / 5));
+          width: calc(100% / 5 - (size(30) / 5));
         }
       }
     }
@@ -89,7 +107,9 @@
       text-align: center;
       line-height: 1.35;
       font-weight: 600;
-
+      margin-top: sizem(10);
+      font-size: sizem(14);
+      margin-bottom: sizem(20);
       @media screen and (min-width: 768px) {
         margin-top: size(25);
         font-size: size(35);

@@ -14,7 +14,7 @@ const sConfig = {
   snap: false,
   easing: "linear",
   gap: 0,
-  loop:true,
+  loop: true,
   type: "loop",
   perMove: 1,
 }
@@ -70,6 +70,9 @@ const sConfig = {
           <img src="./s7/9.svg" alt="pic">
         </SplideSlide>
       </Splide>
+      <p class="font-['Noto_sans_tc'] text-[#000]">
+        建材：官網情境示意，請依實際為準
+      </p>
     </div>
   </article>
 </template>
@@ -81,22 +84,40 @@ const sConfig = {
   .logo {
     position: relative;
 
-    .bg{
+    .bg {
       width: 100%;
+      height: sizem(80);
+
+      @media screen and (min-width: 768px) {
+        height: unset;
+      }
     }
+
     .logoPic {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
+      width: sizem(140);
+
+      @media screen and (min-width: 768px) {
+        width: size(300);
+      }
     }
   }
 
   .content {
     position: relative;
-    .bg{
+
+    .bg {
       width: 100%;
+      height: sizem(240);
+
+      @media screen and (min-width: 768px) {
+        height: unset;
+      }
     }
+
     .content_wrapper {
       position: absolute;
       left: 0;
@@ -108,7 +129,11 @@ const sConfig = {
       align-items: flex-end;
 
       .manager {
-        width: 45%;
+        width: sizem(205);
+
+        @media screen and (min-width: 768px) {
+          width: 45%;
+        }
 
         img {
           width: 100%;
@@ -119,16 +144,34 @@ const sConfig = {
         width: 55%;
 
         .title {
+          width: sizem(175);
+          position: absolute;
+          top: sizem(45);
+          right: sizem(50);
+
           @media screen and (min-width: 768px) {
             margin-top: size(100);
             width: size(580);
+            position: unset;
+            top: unset;
+            right: unset;
           }
         }
 
         .en_text {
+          width: sizem(185);
+          margin-top: sizem(40);
+          position: absolute;
+          bottom: sizem(30);
+          right: sizem(5);
+
           @media screen and (min-width: 768px) {
             width: size(965);
             margin-top: size(150);
+            margin-bottom: size(70);
+            position: unset;
+            bottom: unset;
+            right: unset;
           }
         }
       }
@@ -137,24 +180,56 @@ const sConfig = {
 
   .bottom {
     position: relative;
-.bg{
+
+    .bg {
       width: 100%;
+      height: sizem(210);
+
+      @media screen and (min-width: 768px) {
+        height: size(350);
+      }
     }
+
     .slide {
       position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      width: 100%;
+      top: 50px;
+      left: 0;
+      right: 0;
       margin: auto;
+      top: sizem(30);
+
+      @media screen and (min-width: 768px) {
+        top: size(45);
+      }
 
       .slide-item {
+        width: sizem(120);
+        margin-right: sizem(20);
+
         @media screen and (min-width: 768px) {
           width: size(220);
           margin-right: size(39);
         }
-        img{
+
+        img {
           width: 100%;
         }
+      }
+    }
+
+    p {
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: sizem(10);
+      position: absolute;
+      right: sizem(5);
+      bottom: sizem(5);
+
+      @media screen and (min-width: 768px) {
+        font-size: size(15);
+        right: size(15);
+        bottom: size(15);
       }
     }
   }

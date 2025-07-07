@@ -17,27 +17,50 @@
 
 .s2 {
   position: relative;
-  .bg{
-    width: 100%;
+  height: sizem(460);
+
+  @media screen and (min-width: 768px) {
+    height: unset;
   }
+
+  .bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      width: 100%;
+    }
+  }
+
   .text {
     position: absolute;
     z-index: 1;
     text-align: center;
+    top: sizem(30);
+    left: 0;
+    right: 0;
+    margin: auto;
 
     @media screen and (min-width: 768px) {
       top: size(120);
-      left: 0;
-      right: 0;
-      margin: auto;
+    }
 
-      .title {
-        display: block;
+    .title {
+      display: block;
+      width: sizem(200);
+      margin-bottom: sizem(10);
+
+      @media screen and (min-width: 768px) {
         margin-bottom: size(37);
         width: size(660);
       }
+    }
 
-      .sub-title {
+    .sub-title {
+      width: sizem(215);
+
+      @media screen and (min-width: 768px) {
         width: size(535);
       }
     }
@@ -45,13 +68,16 @@
 
   .building {
     position: absolute;
+    left: sizem(35);
+    bottom: 0;
 
     @media screen and (min-width: 768px) {
       left: size(290);
-      bottom: 0;
     }
 
-    img{
+    img {
+      width: sizem(110);
+
       @media screen and (min-width: 768px) {
         width: size(340);
       }
@@ -60,12 +86,17 @@
 
   .b_text {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    font-size: size(15);
+    right: sizem(10);
+    bottom: sizem(5);
+    font-size: sizem(10);
     font-weight: 400;
-    line-height: 150%;
-    /* 22.5px */
+    line-height: 1.5;
+
+    @media screen and (min-width: 768px) {
+      font-size: size(15);
+      right: 0;
+      bottom: 0;
+    }
   }
 }
 </style>

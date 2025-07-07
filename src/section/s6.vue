@@ -10,7 +10,8 @@
 
     <img class="b_text" src="./s6/b_text.svg" alt="b_text" data-aos="zoom-in" data-aos-delay="0">
 
-    <img class="b" src="./s6/b.webp" alt="b">
+    <img class="b hidden md:block" src="./s6/b.webp" alt="b">
+    <img class="b block md:hidden" src="./s6/b_m.webp" alt="b">
 
   </article>
 </template>
@@ -20,9 +21,21 @@
 
 .s6 {
   position: relative;
+  height: sizem(600);
 
-  .bg{
+  @media screen and (min-width: 768px) {
+    height: unset;
+  }
+
+  .bg {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @media screen and (min-width: 768px) {
+      height: unset;
+      object-fit: unset;
+    }
   }
 
   .b {
@@ -40,6 +53,8 @@
     left: 0;
     right: 0;
     margin: auto;
+    width: sizem(175);
+    top: sizem(30);
 
     @media screen and (min-width: 768px) {
       width: size(580);
@@ -52,6 +67,8 @@
     left: 0;
     right: 0;
     margin: auto;
+    width: sizem(330);
+    top: sizem(95);
 
     @media screen and (min-width: 768px) {
       width: size(915);
@@ -64,6 +81,8 @@
     left: 0;
     right: 0;
     margin: auto;
+    width: sizem(130);
+      bottom: sizem(55);
 
     @media screen and (min-width: 768px) {
       width: size(270);
@@ -71,12 +90,14 @@
     }
   }
 
-  .b_text{
+  .b_text {
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
     z-index: 2;
+    width: sizem(260);
+      bottom: sizem(25);
     @media screen and (min-width: 768px) {
       width: size(655);
       bottom: size(45);
