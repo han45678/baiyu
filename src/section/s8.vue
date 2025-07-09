@@ -1,9 +1,8 @@
 <template>
   <article class="s8 relative" id="s8">
     <div class="top">
-      <div class="title">
-        <img src="./s8/title.svg" alt="title">
-      </div>
+      <h2 class="title" data-aos="zoom-in" data-aos-delay="0">興連城 用「心」連城</h2>
+    
       <div class="banner">
         <img class="block md:hidden" src="./s8/pic_m.webp" alt="banner">
         <img class="hidden md:block" src="./s8/pic.webp" alt="banner">
@@ -31,24 +30,23 @@
 .s8 {
   .top {
     background-color: #fff;
+    overflow: hidden;
 
     @media screen and (min-width: 768px) {
       padding-bottom: size(30);
     }
 
     .title {
+      color: #004552;
       text-align: center;
-
-      img {
-        width: sizem(225);
-        margin-top: sizem(30);
-        margin-bottom: sizem(15);
-
-        @media screen and (min-width: 768px) {
-          margin-top: size(85);
-          margin-bottom: size(75);
-          width: size(740);
-        }
+      font-size:sizem(24);
+      font-weight:600;
+      margin-top: sizem(30);
+      margin-bottom: sizem(10);
+      @media screen and (min-width: 768px) {
+        font-size:size(80);
+        margin-top: size(85);
+        margin-bottom: size(55);
       }
     }
 
@@ -96,6 +94,7 @@
 
       img {
         width: calc(100% / 5);
+        background: linear-gradient(90deg, #fff0,#fffa, #FFF );
 
         @media screen and (min-width: 768px) {
           width: calc(100% / 5 - (size(30) / 5));

@@ -34,7 +34,9 @@ const sConfig = {
           <img src="./s7/manager.webp" alt="manager" data-aos="fade-right" data-aos-delay="0">
         </div>
         <div class="text">
-          <img class="title" src="./s7/title.svg" alt="title" data-aos="fade-right" data-aos-delay="0">
+          <h2 class="title" data-aos="fade-right" data-aos-delay="0">
+            總經理家用嚴選<br>豪宅標配建材
+          </h2>
           <img class="en_text" src="./s7/text.svg" alt="text" data-aos="fade-right" data-aos-delay="0">
         </div>
       </div>
@@ -43,31 +45,31 @@ const sConfig = {
       <img class="bg" src="./s7/b_bg.webp" alt="bg">
       <Splide :options="sConfig" ref="splide" class="slide">
         <SplideSlide class="slide-item">
-          <img src="./s7/1.svg" alt="pic">
+          <img src="./s7/1.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/2.svg" alt="pic">
+          <img src="./s7/2.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/3.svg" alt="pic">
+          <img src="./s7/3.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/4.svg" alt="pic">
+          <img src="./s7/4.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/5.svg" alt="pic">
+          <img src="./s7/5.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/6.svg" alt="pic">
+          <img src="./s7/6.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/7.svg" alt="pic">
+          <img src="./s7/7.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/8.svg" alt="pic">
+          <img src="./s7/8.webp" alt="pic">
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s7/9.svg" alt="pic">
+          <img src="./s7/9.webp" alt="pic">
         </SplideSlide>
       </Splide>
       <p class="font-['Noto_sans_tc'] text-[#000]">
@@ -148,6 +150,9 @@ const sConfig = {
           position: absolute;
           top: sizem(45);
           right: sizem(50);
+          font-size:sizem(24);
+          color: #991F25;
+          font-weight:600;
 
           @media screen and (min-width: 768px) {
             margin-top: size(100);
@@ -155,6 +160,7 @@ const sConfig = {
             position: unset;
             top: unset;
             right: unset;
+            font-size:size(80);
           }
         }
 

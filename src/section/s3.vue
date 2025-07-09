@@ -41,7 +41,7 @@ const swiperOptions = {
       :loop="true">
       <SwiperSlide>
         <img src="./s3/bg1.webp" alt="bg" />
-        <img class="title" src="./s3/title.svg" alt="title">
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0">家前散策 生態綠廊公園</h2>
       </SwiperSlide>
       <SwiperSlide>
         <img src="./s3/bg2.webp" alt="bg" />
@@ -62,26 +62,27 @@ const swiperOptions = {
   .bg {
     width: 100%;
     height: 100%;
-
+    .title {
+      position: absolute;
+      text-align: center;
+      color: #fff;
+      font-size:sizem(24);
+      font-weight:600;
+      left: 0;
+      right: 0;
+      top: sizem(25);
+      z-index: 12;
+    
+      @media screen and (min-width: 768px) {
+        font-size:size(80);
+          top: size(100);
+         // width: size(820);
+        }
+    }
     img {
       width: 100%;
       height: auto;
       display: block;
-
-      &.title {
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: auto;
-        z-index: 12;
-        top: sizem(30);
-        width: sizem(250);
-
-        @media screen and (min-width: 768px) {
-          top: size(120);
-          width: size(820);
-        }
-      }
     }
   }
 

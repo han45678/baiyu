@@ -10,7 +10,6 @@ import 'swiper/css'
 <template>
   <article class="s5 relative" id="s5">
     <div class="top">
-      <img class="bg" src="./s5/bg.webp" alt="bg">
       <img class="architecture" src="./s5/architecture.webp" alt="architecture" data-aos="fade-up" data-aos-delay="3">
       <img class="title" src="./s5/title.svg" alt="title" data-aos="fade-right">
     </div>
@@ -22,7 +21,7 @@ import 'swiper/css'
 
     <div class="bottom">
       <div class="text">
-        <img class="b_title" src="./s5/b_title.svg" alt="b_title" data-aos="zoom-in" data-aos-delay="0">
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0"><span class="text-[#991F25]">R20</span>捷運 <span>500</span>米步行圈</h2>
         <img class="mrt" src="./s5/mrt.svg" alt="mrt" data-aos="zoom-in" data-aos-delay="0">
       </div>
       <div class="stronghold">
@@ -55,19 +54,26 @@ import 'swiper/css'
 
   .top {
     position: relative;
-
+    background:linear-gradient(0deg, rgba(147, 183, 220, 0.00) -39.82%, rgba(147, 183, 220, 0.04) -33.66%, rgba(147, 183, 220, 0.14) -24.42%, rgba(147, 183, 220, 0.30) -12.11%, rgba(147, 183, 220, 0.53) 1.75%, rgba(147, 183, 220, 0.83) 15.6%, #93B7DC 24.84%, #5880BE 84.88%, #416AB2 114.13%) ;
+    height: sizem(133);
+    @media screen and (min-width: 768px) {
+      height: size(488);
+    }
     .bg {
       width: 100%;
     }
 
     .architecture {
       position: absolute;
-      right: 0;
+      right:sizem(-53);
       bottom: 0;
-      width: sizem(315);
+      //width: sizem(315);
+      height:sizem(93);
 
       @media screen and (min-width: 768px) {
-        width: size(1600);
+        right: 0;
+        bottom: size(-90);
+        height: size(395);
       }
     }
 
@@ -101,7 +107,7 @@ import 'swiper/css'
     p {
       color: #000;
       font-weight: 400;
-      line-height: sizem(20);
+      line-height: 2;
       font-size: sizem(10);
       background: #B9CCDA;
       text-align: right;
@@ -120,16 +126,6 @@ import 'swiper/css'
 
   .bottom {
     .text {
-      .b_title {
-        display: block;
-        margin-top: sizem(30);
-        width: sizem(245);
-
-        @media screen and (min-width: 768px) {
-          margin-top: size(100);
-          width: size(815);
-        }
-      }
 
       .mrt {
         display: block;
@@ -144,13 +140,38 @@ import 'swiper/css'
         }
       }
     }
+    .title {
+      display: block;
+        font-size:sizem(24);
+        margin-top: sizem(30);
+        font-weight:600;
+        text-align: center;
+      @media screen and (min-width: 768px) {
+        font-size:size(80);margin-top: size(100);
+      }
+      span{
+        font-weight:400;font-size: 1.2em;
+      }
+    }
 
     .stronghold {
       position: relative;
       pointer-events: none;
+      background: url("./s5/stronghold.svg") center center;
+      background-size: sizem(470) auto;
+      height:auto;
+      @media screen and (min-width: 768px) {
+      height:size(488);
+      background-size: cover;
+    }
 
       .stronghold_img {
-        width: 100%;
+      display: block;margin: auto;
+      width: 100%;
+      height:sizem(137);
+      @media screen and (min-width: 768px) {
+width: auto;
+        height:100%;}
       }
 
       .train {

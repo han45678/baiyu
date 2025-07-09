@@ -2,8 +2,8 @@
   <article class="s2 relative" id="s2">
     <img class="bg" src="./s2/bg.webp" alt="bg">
     <div class="text">
-      <img class="title" src="./s2/title.svg" alt="title" data-aos="zoom-in" data-aos-delay="0">
-      <img class="sub-title" src="./s2/subTitle.svg" alt="subTitle" data-aos="zoom-in" data-aos-delay="0">
+      <h2 class="title" data-aos="zoom-in" data-aos-delay="0">景在山裏 家在景裏</h2>
+      <p class="sub-title font-['Noto_sans_tc']" data-aos="zoom-in" data-aos-delay="0">87米摩天座標 對望163公頃半屏山<br>山色即景，日常成詩</p>
     </div>
     <div class="building">
       <img src="./s2/building.webp" alt="building" data-aos="fade-up" data-aos-delay="3">
@@ -17,7 +17,7 @@
 
 .s2 {
   position: relative;
-  height: sizem(460);
+  height: sizem(390);
 
   @media screen and (min-width: 768px) {
     height: unset;
@@ -41,6 +41,7 @@
     left: 0;
     right: 0;
     margin: auto;
+    color: #fff;
 
     @media screen and (min-width: 768px) {
       top: size(120);
@@ -48,20 +49,20 @@
 
     .title {
       display: block;
-      width: sizem(200);
       margin-bottom: sizem(10);
+        font-size:sizem(24);
+        font-weight:600;
 
       @media screen and (min-width: 768px) {
         margin-bottom: size(37);
-        width: size(660);
+        font-size:size(80);
       }
     }
 
     .sub-title {
-      width: sizem(215);
-
+      font-size:sizem(14);
       @media screen and (min-width: 768px) {
-        width: size(535);
+        font-size:size(35);
       }
     }
   }

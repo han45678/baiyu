@@ -1,8 +1,8 @@
 <template>
   <article class="s6 relative" id="s6">
     <img class="bg" src="./s6/bg.webp" alt="bg">
-
-    <img class="title" src="./s6/title.svg" alt="title" data-aos="zoom-in" data-aos-delay="0">
+    <h2 class="title" data-aos="zoom-in" data-aos-delay="0">自住宅 量身訂製</h2>
+    
 
     <img class="pattern" src="./s6/pattern.svg" alt="pattern" data-aos="zoom-in" data-aos-delay="0">
 
@@ -52,15 +52,17 @@
     position: absolute;
     left: 0;
     right: 0;
-    margin: auto;
-    width: sizem(175);
-    top: sizem(30);
-
-    @media screen and (min-width: 768px) {
-      width: size(580);
-      top: size(130);
+    width: 100%;
+      display: block;
+        font-size:sizem(24);
+        top: sizem(30);
+        font-weight:600;
+        text-align: center;
+        color: #fff;
+      @media screen and (min-width: 768px) {
+        font-size:size(80);top: size(130);
+      }
     }
-  }
 
   .pattern {
     position: absolute;

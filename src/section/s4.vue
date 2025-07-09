@@ -11,8 +11,8 @@
       <img class="bg block md:hidden" src="./s4/bg_m.jpg" alt="bg">
 
       <div class="text">
-        <img class="title" src="./s4/title.svg" alt="title" data-aos="zoom-in" data-aos-delay="0">
-        <img class="subtitle" src="./s4/subtitle.svg" alt="subtitle" data-aos="zoom-in" data-aos-delay="0">
+        <h2 class="title" data-aos="zoom-in" data-aos-delay="0">比鄰 兆元科技園區</h2>
+        <p class="subtitle font-['Noto_sans_tc']" data-aos="zoom-in" data-aos-delay="0">高雄台積電先進製程 預計2025年底量產</p>
         <img class="pic" src="./s4/pic.webp" alt="pic" data-aos="zoom-in" data-aos-delay="0">
       </div>
       <p class="b_text font-['Noto_sans_tc'] text-[#fff]">
@@ -63,10 +63,32 @@
       margin: auto;
       text-align: center;
       top: sizem(30);
+      color: #fff;
 
       @media screen and (min-width: 768px) {
-        top: size(135);
+        top: size(90);
       }
+      
+    .title {
+      display: block;
+      margin-bottom: sizem(0);
+        font-size:sizem(24);
+        font-weight:600;
+
+      @media screen and (min-width: 768px) {
+        margin-bottom: size(10);
+        font-size:size(80);
+      }
+    }
+
+    .subtitle {
+      font-size:sizem(14);
+      font-weight:400;
+      margin-bottom: sizem(10);
+      @media screen and (min-width: 768px) {
+        font-size:size(35);
+      }
+    }
 
       img {
         display: block;
@@ -102,10 +124,11 @@
 
     .b_text {
       position: absolute;
-      bottom: 0;
-      right: 0;
+      bottom: 0.2em;
+      right: 0.5em;
       font-weight: 400;
       line-height: 1.5;
+      font-size: sizem(12);
 
       @media screen and (min-width: 768px) {
         font-size: size(15);
