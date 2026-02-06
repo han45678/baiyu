@@ -1,13 +1,13 @@
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue'
-import { Navigation } from 'swiper'// 導入 Navigation 模組
+import { Navigation, Autoplay } from 'swiper'// 導入 Navigation 模組
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 
 // Swiper 設定
 const swiperOptions = {
-  modules: [Navigation], // 添加 Navigation 模組
+  modules: [Navigation, Autoplay], // 添加 Navigation 模組
   loop: true,
   navigation: {
     nextEl: '.custom-next',
@@ -15,7 +15,12 @@ const swiperOptions = {
   },
   pagination: {
     clickable: false
-  }
+  },
+  autoplay: {
+    delay: 3500,
+    disableOnInteraction: false
+  },
+  loop:true
 }
 </script>
 
@@ -37,8 +42,7 @@ const swiperOptions = {
       </svg>
     </div>
 
-    <Swiper class="bg" :modules="[Navigation]" :navigation="{ nextEl: '.custom-next', prevEl: '.custom-prev' }"
-      :loop="true">
+    <Swiper class="bg" v-bind="swiperOptions">
       <SwiperSlide>
         <img src="./s3/bg1.webp" alt="bg" />
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0">家前散策 生態綠廊公園</h2>
