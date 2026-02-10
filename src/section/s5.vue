@@ -16,7 +16,7 @@ import 'swiper/css'
 
     <div class="min">
       <img src="./s5/b_pic.webp" alt="pic">
-      <p class="font-['Noto_sans_tc'] text-[#000]">依政府公開計畫繪製，僅供參考，請依實際為主</p>
+      <!-- <p class="font-['Noto_sans_tc'] text-[#000]">依政府公開計畫繪製，僅供參考，請依實際為主</p> -->
     </div>
 
     <div class="bottom">

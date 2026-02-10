@@ -36,6 +36,25 @@
     </div>
 
   </div>
+      <div class="flex flex-wrap flex-1 box0">
+      <div class="butt phone" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+        <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
+        <div>新竹：{{ info.phone }}</div>
+      </div>
+<div class="address" v-if="info.address">
+        <div class="flex-1"><span>新竹據點：</span>新竹高鐵站旁-竹北市光明六路東二段𝟔𝟐𝟏號𝟏𝐅</div>
+      
+      <div class="butt googlemap"
+        @click="modalOpen = true; modalType = 'gmap'">
+        <img src="//h35.banner.tw/img//form/gmap.svg" alt="導航 GoogleMap" srcset="" />
+        <div>導航 GoogleMap</div>
+      </div>
+    </div>
+    <div class="gmap relative z-10 mt-3" v-if="info.address">
+        <iframe :src="info.googleSrc" frameborder="0"></iframe>
+    </div>
+
+  </div>
 </div>
 
 
@@ -203,10 +222,6 @@
   }
   .box0{border: 1px solid #0003;padding: 10px;
   background:#fff5;}
-  
-@media screen and (min-width:768px) {
-  .box1{max-width: size(940);}
-}
 
   .contact-item-box {
     position: relative;
