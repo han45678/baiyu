@@ -12,11 +12,11 @@
 
       <div class="text">
         <h2 class="title" data-aos="zoom-in" data-aos-delay="0">比鄰 兆元科技園區</h2>
-        <p class="subtitle font-['Noto_sans_tc']" data-aos="zoom-in" data-aos-delay="0">高雄台積電先進製程 預計2025年底量產</p>
-        <img class="pic" src="./s4/pic.webp" alt="pic" data-aos="zoom-in" data-aos-delay="0">
+        <p class="subtitle font-['Noto_sans_tc']" data-aos="zoom-in" data-aos-delay="0">2奈米先進製程 已於2025年底開始量產</p>
+        <img class="pic" src="./s4/pic.svg" alt="pic" data-aos="zoom-in" data-aos-delay="0">
       </div>
       <p class="b_text font-['Noto_sans_tc'] text-[#fff]">
-        高雄台積電實景拍攝 綠意合成示意圖
+        職缺數量及完工時間點僅供參考 資料來源為自由新聞 正確的數據須依趨時為準<br class="block md:hidden" /> 高雄台積電實景拍攝 綠意合成示意圖
       </p>
     </div>
   </article>
@@ -124,11 +124,14 @@
 
     .b_text {
       position: absolute;
-      bottom: 0.2em;
-      right: 0.5em;
+      bottom: 0em;
+      right: 0em;
+      padding: .2em .5em;
       font-weight: 400;
-      line-height: 1.5;
-      font-size: sizem(12);
+      line-height: 1.3;
+      font-size: sizem(10);
+      text-align: right;
+      text-shadow: 0 0 0.1em #000;
 
       @media screen and (min-width: 768px) {
         font-size: size(15);
