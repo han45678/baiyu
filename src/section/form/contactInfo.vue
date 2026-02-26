@@ -44,11 +44,11 @@
 
   <!-- Mobile contact info -->
     <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-      <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+      <!-- <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="新竹專線" srcset="" />
       <div>新竹專線</div>
-    </div>
+    </div>  -->
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phoneB'">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="高雄專線" srcset="" />
