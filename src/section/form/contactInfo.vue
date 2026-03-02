@@ -400,7 +400,7 @@ const go = () => {
        window.location.href = "phoneThanks";
      }, 1000);
   } else if (modalType.value == 'phoneB') {
-    window.location.href = `tel:${info.phoneB.replace("-", "")}`;
+    window.location.href = `tel:076118333`;
      setTimeout(() => {
        window.location.href = "phoneThanks";
      }, 1000);
