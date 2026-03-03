@@ -43,7 +43,7 @@
 </div>
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
       <!-- <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="新竹專線" srcset="" />
@@ -62,6 +62,11 @@
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="//h35.banner.tw/img//form/pen.svg" alt="預約賞屋" srcset="" />
       <div>預約賞屋</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'gmapB'; onMapClick();" >
+      <img src="//h35.banner.tw/img//form/gmap.svg" alt="地圖導航" srcset="" />
+      <div>地圖導航</div>
     </div>
   </div>
 
@@ -255,6 +260,39 @@
   img{filter: invert(11%) sepia(94%) saturate(6570%) hue-rotate(347deg) brightness(65%) contrast(93%);
   }
 }
+
+  .mo-contact-info {
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size(55);
+    gap: 1px;
+    box-shadow: 0 0 size(50) rgba(0, 0, 0, 0.501);
+    background:#A30C24;
+
+
+    .contact-item {
+      height: 100%;      
+      font-size: size(16);
+      font-weight: 400;
+      color: #fff;
+      border-left:1px solid #fff9;
+
+      img {
+        margin-bottom: size(5);
+        max-width: size(16.5);
+        height: auto;
+        max-height: size(16.5);
+        filter: brightness(0) invert(1);
+      }
+      &:first-child{
+      border-left:0;}
+
+    }
+  }
+
 
 @media screen and (max-width:768px) {
 
