@@ -20,10 +20,10 @@
       <div class="flex flex-wrap flex-1 box0">
       <div class="butt phone" @click="modalOpen = true; modalType = 'phoneB'" v-if="info.phone">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="電話" srcset="" />
-        <div>高雄：{{ info.phoneB }}</div>
+        <div>{{ info.phoneB }}</div>
       </div>
 <div class="address">
-        <div class="flex-1"><span>高雄據點：</span>高雄橋頭經武路𝟏𝟐𝟑號(橋新七路口)</div>
+        <div class="flex-1"><span>接待中心：</span>高雄橋頭經武路𝟏𝟐𝟑號(橋新七路口)</div>
       
       <div class="flex butt googlemap"
         @click="modalOpen = true; modalType = 'gmapB'">
@@ -51,10 +51,10 @@
     </div>  -->
     <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phoneB'">
-      <img src="//h35.banner.tw/img//form/phone.svg" alt="高雄專線" srcset="" />
-      <div>高雄專線</div>
+      <img src="//h35.banner.tw/img//form/phone.svg" alt="預約專線" srcset="" />
+      <div>預約專線</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'fb'">
       <img src="//h35.banner.tw/img//form/messenger.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
@@ -96,9 +96,9 @@
 />
 
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '新竹專線' : modalType == 'phoneB' ? '高雄專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '新竹專線' : modalType == 'phoneB' ? '預約專線' : modalType == 'fb' ? 'Facebook Messenger' :
       modalType == 'gmap' ? '新竹據點' :
-      modalType == 'gmapB' ? '高雄據點' :""
+      modalType == 'gmapB' ? '接待中心' :""
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone :modalType == 'phoneB' ? info.phoneB : modalType == 'fb' ? '線上諮詢' :
